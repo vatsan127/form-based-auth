@@ -30,7 +30,7 @@ public class SpringSecurityConfig {
                 .build();
 
 
-        return new InMemoryUserDetailsManager(user1, user2);
+        return new InMemoryUserDetailsManager(user1, user2, user3);
     }
 
     @Bean
