@@ -24,6 +24,12 @@ public class SpringSecurityConfig {
                 .roles("default")
                 .build();
 
+        UserDetails user3 = User.withUsername("admin")
+                .password(new BCryptPasswordEncoder().encode("admin"))
+                .roles("Admin")
+                .build();
+
+
         return new InMemoryUserDetailsManager(user1, user2);
     }
 
